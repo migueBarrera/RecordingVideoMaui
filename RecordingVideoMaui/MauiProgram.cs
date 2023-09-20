@@ -11,6 +11,7 @@ namespace RecordingVideoMaui
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .UseMauiCommunityToolkitMediaElement()
                 .RegisterPages()
                 .UseMauiCameraView()
