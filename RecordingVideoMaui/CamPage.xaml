@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="RecordingVideoMaui.CamPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+    Title="CamPage">
+    <Grid RowDefinitions="*,80">
+        <cv:CameraView
+            x:Name="cameraView"
+            AutoRecordingFile="{Binding RecordingFile}"
+            AutoSnapShotAsImageSource="True"
+            AutoSnapShotFormat="PNG"
+            AutoSnapShotSeconds="{Binding SnapshotSeconds}"
+            AutoStartPreview="{Binding AutoStartPreview}"
+            AutoStartRecording="{Binding AutoStartRecording}"
+            Camera="{Binding Camera}"
+            Cameras="{Binding Cameras, Mode=OneWayToSource}"
+            Microphone="{Binding Microphone}"
+            Microphones="{Binding Microphones, Mode=OneWayToSource}"
+            NumCamerasDetected="{Binding NumCameras, Mode=OneWayToSource}"
+            NumMicrophonesDetected="{Binding NumMicrophones, Mode=OneWayToSource}"
+            TakeAutoSnapShot="{Binding TakeSnapshot}" />
+        <Grid
+            Grid.Row="1"
+            BackgroundColor="Black"
+            HorizontalOptions="Center">
+            <Button
+                Command="{Binding RecCommand}"
+                Text="Rec"
+                VerticalOptions="Center" />
+        </Grid>
+    </Grid>
+</ContentPage>
