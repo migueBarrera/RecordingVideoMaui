@@ -24,10 +24,11 @@
         <Grid
             Grid.Row="1"
             BackgroundColor="Black"
-            HorizontalOptions="Center">
+            HorizontalOptions="FillAndExpand">
             <Button
                 Command="{Binding RecCommand}"
                 Text="Rec"
+                HorizontalOptions="Center"
                 VerticalOptions="Center" />
         </Grid>
     </Grid>
